@@ -1,6 +1,7 @@
 window.onload = function () {
     const circle = document.getElementById('circle');
     const input = document.getElementById('colorName');
+    const hexCode = document.getElementById('colorHexCode');
 	
     // Add event listener to detect Enter key
     input.addEventListener('keypress', function (e) {
@@ -18,12 +19,12 @@ window.onload = function () {
             if (circle.style.backgroundColor !== '') {
                 // Convert RGB to Hex and update the hex code display
                 const hexColor = rgbToHex(window.getComputedStyle(circle).backgroundColor);
-                colorHexCode.textContent = hexColor;
+                hexCode.textContent = hexColor;
             } else {
                 // If the color is invalid, alert the user and reset the input
                 alert('Invalid color! Please use a valid color name or hex value.');
                 input.value = 'rebeccapurple';
-				colorHexCode.textContent = '#663399';
+				hexCode.textContent = '#663399';
             }
         }
     });

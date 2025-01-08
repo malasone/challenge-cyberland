@@ -5,3 +5,12 @@ Functionality: inputing the name of the color in the text inside the circle, if 
 To get the hex code, I searched and found a solution in stackoverflow rgb to hexcode where `window.getComputedStyle(<element>).backgroundColor` returns rgb values `[255, 255, 255]` and then converted to int parsed to hexa decimal string. Hence ```.toString(16)```. Then slice as -2 to ensure 2 values are returned. Finally joined to get the whole hexadecimal.
 
 [Element color to (RGB to HEX)](https://stackoverflow.com/questions/1740700/how-to-get-hex-color-value-rather-than-rgb-value)
+
+#### Testing ####
+**To run:**
+Open index.html, change input into color names.
+
+**To Test**
+```npm install
+npm test
+```
