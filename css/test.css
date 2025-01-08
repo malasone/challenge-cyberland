@@ -1,0 +1,37 @@
+body {
+	margin: 0;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #F0F4C3;
+	font-family: Arial, sans-serif;
+}
+
+/* dynamic color element */
+.color-circle {
+	aspect-ratio: 1 / 1;  
+	width: auto;
+	height: 75%;
+	background-color: CornflowerBlue; /* placeholder color from MDN color reference */
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Text field inside the circle */
+input[type="text"] {
+	border: none;
+	background: transparent;
+	text-align: center;
+	font-size: 18px;
+	color: white;
+	font-weight: bold;
+	width: 150px;
+}
+
+input[type="text"]:focus {
+	outline: none;
+}
