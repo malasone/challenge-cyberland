@@ -15,10 +15,24 @@ window.onload = function () {
 			*/
 
             // If the color is invalid, revert to the placeholder color
-            if (circle.style.backgroundColor === '') {
+            if (circle.style.backgroundColor !== '') {
+                // Convert RGB to Hex and update the hex code display
+                const hexColor = rgbToHex(window.getComputedStyle(circle).backgroundColor);
+                colorHexCode.textContent = hexColor;
+            } else {
+                // If the color is invalid, alert the user and reset the input
                 alert('Invalid color! Please use a valid color name or hex value.');
-                input.value = '';
+                input.value = 'rebeccapurple';
+				colorHexCode.textContent = '#663399';
             }
         }
     });
 };
+
+// Function to convert RGB to Hex format
+function rgbToHex(rgb) {
+    var result = rgb.match(/\d+/g);
+    return "#" + result.map(function(x) {
+        return ("0" + parseInt(x).toString(16)).slice(-2);
+    }).join('');
+}

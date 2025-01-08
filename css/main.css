@@ -13,7 +13,7 @@ body {
 	aspect-ratio: 1 / 1;  
 	width: auto;
 	height: 75%;
-	background-color: CornflowerBlue; /* placeholder color from MDN color reference */
+	background-color: rebeccapurple; /* placeholder color from MDN color reference */
 	border-radius: 50%;
 	display: flex;
 	align-items: center;
@@ -34,4 +34,11 @@ input[type="text"] {
 
 input[type="text"]:focus {
 	outline: none;
+}
+
+#colorHexCode {
+	margin-left: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
 }
